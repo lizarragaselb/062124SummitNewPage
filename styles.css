@@ -1,0 +1,839 @@
+/* Estilos para el navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #f6f2f2;
+    z-index: 1000;
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    font-weight: 450;
+    font-size: 12pt;
+    box-shadow: inset 0px 6px 10px rgba(71, 68, 68, 0.1);
+}
+
+#heroAbout,
+#heroServices,
+#carouselExampleFade {
+    margin-top: 0px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.nav-item {
+    margin-right: 5px;
+}
+
+/* Estilos para los enlaces de la barra de navegación */
+.nav-link {
+    color: #000; /* Color de texto predeterminado */
+    text-decoration: none; /* Quitar subrayado */
+    transition: color 0.3s, font-weight 0.3s; /* Transición suave del color del texto */
+}
+
+/* Estilo para los enlaces especiales ("Contact Us", "Log In", "Join Summit") */
+.nav-item.special .nav-link {
+    color: #c8304c !important; /* Color inicial de los enlaces especiales */
+}
+
+/* Estilos para el hover */
+.nav-link:hover {
+    color: #c8304c !important; /* Color del texto cuando el cursor pasa sobre el enlace */
+}
+
+/* Estilo para el hover en enlaces especiales */
+.nav-item.special .nav-link:hover {
+    color: #2f2f2f !important; /* Color del texto cuando el cursor pasa sobre los enlaces especiales */
+}
+
+/* Estilo para el enlace activo */
+.nav-link.active {
+    color: #c8304c !important; /* Color del texto cuando está activo */
+    font-weight: 700; /* Hacer el texto en negrita */
+}
+
+/* Estilo para los enlaces especiales activos */
+.nav-item.special .nav-link.active {
+    color: #c8304c; /* Color del texto cuando el enlace especial está activo */
+    font-weight: 800; /* Hacer el texto en negrita */
+}
+
+/* Estilos para el botón "Join Summit" */
+.nav-link.outlined-button {
+    padding: 0.375rem 0.75rem; /* Ajuste del padding */
+    margin-left: 0.5rem; /* Ajuste del margen izquierdo */
+    border: 1px solid #c8304c;
+    border-radius: 5px;
+    color: #c8304c;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link.outlined-button:hover {
+    background-color: #c8304c !important;
+    color: #fff !important;
+}
+
+/* Estilos para el hamburguer menu en dispositivos móviles */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        margin-bottom: 8px; /* Añade espacio entre cada título del menú */
+    }
+}
+
+/* Ajuste del tamaño del botón de hamburguesa */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem 1rem; /* Ajuste del padding */
+}
+
+.navbar-toggler-icon {
+    width: 1.5rem; /* Ajuste del tamaño del icono */
+    height: 1.5px; /* Ajuste del grosor del icono */
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el botón de cierre del menú */
+.btn-close-menu {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #c8304c;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 4rem; /* Ajusta la posición horizontal */
+    z-index: 900; /* Reducir el z-index */
+}
+
+/* Mostrar el botón de cierre cuando el menú está desplegado */
+.navbar-collapse.show + .btn-close-menu {
+    display: block;
+}
+
+/* Ocultar el botón de hamburguesa cuando el menú está desplegado */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    display: none;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* Estilos para el carousel */
+.carousel {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra al carousel */
+}
+
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0); /* Fondo semi-transparente para el texto */
+    color: rgb(13, 13, 13); /* Color de texto */
+    padding: 20px; /* Espaciado interno */
+    width: auto; /* Ajustar el ancho automáticamente */
+    max-width: 45%; /* Limitar el ancho máximo */
+    position: absolute;
+    top: 60%;
+    left: 1%; /* Margen desde el borde izquierdo */
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1,
+.carousel-caption p,
+.carousel-caption button {
+    text-align: left; /* Alineación del texto a la izquierda */
+    display: block; /* Asegura que cada elemento esté en su propia línea */
+
+}
+
+.carousel-caption h1 {
+    font-size: 3rem; /* Tamaño del encabezado */
+    font-family: "Raleway", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    color: #ecadb9;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* Ajusta los valores según tu preferencia */
+}
+
+.carousel-caption p {
+    font-size: 2rem; /* Tamaño del párrafo */
+    font-family: "Raleway", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 650;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); /* Ajusta los valores según tu preferencia */
+}
+
+.carousel-caption button {
+    /* Estilos personalizados para el botón */
+    background-color: #c8304c;
+    font-family: "Raleway", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    border-radius: 4px;
+    border: #c8304c;
+    margin-top: 20px; /* Espaciado superior para el botón */
+    padding: 15px;
+}
+.carousel-caption button:hover {
+    background-color: #ffffff; /* Change the background color on hover */
+    color: #c8304c;
+    border: 2px solid #c8304c;
+   
+}
+
+.carousel-item img {
+    height: 645px; /* Modifica esta altura según tus necesidades */
+    object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo la relación de aspecto */
+    filter: brightness(0.7);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .carousel-caption {
+        max-width: 75%;
+        padding: 10px;
+        left: 5%; /* Ajuste del margen izquierdo */
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-caption button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        max-width: 90%;
+        padding: 5px;
+        left: 5%; /* Ajuste del margen izquierdo */
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-caption button {
+        font-size: 1.0rem;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* Do custoers tastings really drive sales? */
+
+#title1 {
+    background-color: transparent; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    background-image: url(...);
+    
+}
+
+#title1 .title {
+    text-align: center; /* Alineación del título al centro */
+    margin-bottom: 20px; /* Espacio inferior para separar el título */
+    font-weight: 700;
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+}
+
+#title1 .card {
+    border: none; /* Quita el borde de la tarjeta */
+}
+
+#title1 .card-body {
+    padding: 60px; /* Espaciado interno del cuerpo de la tarjeta */
+}
+
+#title1 .btn-primary {
+    float: left; /* Alinea el botón a la izquierda */
+    background-color: #c8304c; /* Cambia el color de fondo del botón */
+    border: none; /* Quita el borde del botón */
+    padding: 10px 20px; /* Ajusta el padding del botón */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+#title1 .btn-primary:hover {
+    background-color: #ffffff; /* Change the background color on hover */
+    color: #c8304c;
+    border: 1px solid #c8304c; 
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    #title1 .btn-primary {
+        float: none; /* Quita la flotación para que el botón se centre */
+        margin-top: 20px; /* Agrega un margen superior para separar el botón */
+        text-align: center; /* Alinea el botón al centro */
+        width: 100%; /* El ancho del botón se ajusta al 100% del contenedor */
+    }
+}
+#title1 .card-text {
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+    color: #333; /* Color del texto */
+    font-size: 20px; /* Tamaño de la fuente */
+    line-height: 1.6; /* Altura de línea */
+}
+
+#title1 .card-text span {
+    font-weight: bold; /* Estilo de fuente negrita para el texto resaltado */
+}
+
+#title1 .card-text#text2 {
+    color: grey; /* Color del texto para el segundo párrafo */
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* Quality promises */
+
+#summit-text {
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+    color: #333; /* Color del texto */
+    font-size: 20px; /* Tamaño de la fuente */
+    line-height: 1.6; /* Altura de línea */
+    font-weight: 450;
+
+}
+#summit-title {
+    /* Añadir espacio en la parte inferior */
+    margin-bottom: 40px; /* Puedes ajustar este valor según sea necesario */
+    font-family:"Raleway", sans-serif;
+    font-weight: 700;
+    margin-top: 80px;
+}
+   
+
+
+#summit-subh {
+    /* Agregar estilos al contenedor principal */
+  
+    padding: 60px 0; /* Espaciado interno superior e inferior */
+}
+
+#summit-subh h4 {
+    /* Estilos para los títulos */
+    font-size: 1.3rem; /* Tamaño de fuente */
+    font-family:"Raleway", sans-serif;
+}
+
+#summit-subh img {
+    /* Estilos para las imágenes */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+#summit-background {
+    background-image: url(...);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    padding: 20px; /* Ajusta el espacio interior del contenedor según sea necesario */
+    color: #000000; /* Color del texto */
+    
+}
+
+.separator-line {
+    border: none;
+    height: 1px;
+    background-color: rgb(94, 93, 93);
+    margin: 20px 0; /* Espacio superior e inferior */
+    margin-top: 50px;
+}
+
+    /* Estilos para el hr */
+    hr.separator {
+        border: 1px solid #a19f9f;
+        margin: px 0;
+        width: 100%;
+        align-items: center;
+    }
+/* ------------------------------------------------------------------------------------------------------------------------------------ */
+/* Estilos para Testimonials */
+#summit-testimonials {
+    margin-bottom: 0; /* Ajusta o elimina el margen inferior según sea necesario */
+}
+
+
+.home-testimonial {
+    
+    background-color: #ffffff;
+    padding: 0px 0;
+}
+
+.home-testimonial-bottom {
+    
+    background-image: url(Img/PNG/About_testimonials2.png);
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top:60px;
+    padding-top: -300px;
+  
+}
+
+.home-testimonial h3 {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.home-testimonial h2 {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 60px;
+    font-family:"Raleway", sans-serif;
+}
+
+.testimonial-inner {
+    position: relative;
+    top: -60px;
+    
+}
+
+.testimonial-pos {
+    position: relative;
+    top: 0;
+}
+
+.testimonial-inner .tour-desc {
+    border-radius: 5px;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(90, 89, 89, 0.1);
+}
+
+.color-grey-3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: #797a7b;
+}
+
+.testimonial-inner img.tm-people {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: none;
+}
+
+.link-name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.link-position {
+    font-family: "La Belle Aurore", cursive;
+    font-size: 16px;
+    color: #c8304c;
+}
+
+/* Client carousel */
+#cliente-title {
+    font-family: 'Raleway', sans-serif; /* Cambia a la fuente que prefieras */
+    font-weight: 700; /* Cambia al peso que prefieras */
+    color: #000000; /* Cambia al color que prefieras */
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+
+#cliente-carousel {
+    margin-top: 0; /* Ajusta o elimina el margen superior según sea necesario */
+}
+#cliente-carousel .carousel-item img#client-img {
+    width: 187px;
+    height: 187px;
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción sin estirarse */
+    filter: none; /* Asegura que no haya filtros aplicados a las imágenes */
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff00;
+    padding-bottom: 80px;
+    box-shadow: none; /* Asegura que no haya sombra en el contenedor */
+    background-image: url(Img/PNG/Bac_HIGH02.png);
+}
+
+#carouselExampleControls {
+    width: 90%;
+    padding-left: 40px;
+    box-shadow: none !important; /* Elimina cualquier sombra persistente del contenedor */
+}
+
+#carousel-control-prev2,
+#carousel-control-next2 {
+    color: #000000;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#carousel-control-prev2:hover,
+#carousel-control-next2:hover {
+    color: #000000;
+    background-color: transparent;
+    border-color: transparent;
+}
+.row.my-5 {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/*App style--------------------------------------------------------------------------- */
+/* Estilos personalizados */
+#App {
+    background-image: url('Img/PNG/Back_HIGH4.png');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #ffffff; /* Color del texto, si es necesario */
+    padding-top: 100px;
+    font-family: "Raleway", sans-serif;
+
+}
+
+#App .card-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #333333;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+#App .card-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #666666;
+    text-align: left;
+    line-height: 1.6;
+    padding-bottom: 30px;
+}
+
+.app-image {
+    padding-top: 60px;
+}
+
+@media (max-width: 768px) {
+    #App .card-title,
+    #App .card-text {
+        text-align: center;
+    }
+    #App .text-md-left.text-md-start {
+        text-align: center;
+    }
+    .app-image {
+        padding-top: 85px; /* 60px original + 25px adicionales */
+    }
+}
+/* General adjustments */
+/* Estilos para los botones */
+.custom-btn {
+    padding: 0; /* Elimina el padding del botón */
+    border: none !important; /* Elimina el borde del botón */
+    background: none !important; /* Elimina el fondo del botón */
+    width: 100%; /* Asegura que el botón ocupe el 100% del ancho de su contenedor */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: left !important; /* Centra horizontalmente */
+    align-items: left !important; /* Centra verticalmente */
+    height: 150px; /* Altura fija para los botones */
+}
+
+/* Estilos para las imágenes dentro de los botones */
+.store-btn {
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+}
+
+@media (max-width: 768px) {
+    .custom-btn {
+        height: 120px; /* Ajusta la altura en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-btn {
+        height: 100px; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+}
+
+
+/* Estilos generales del footer ---------------------------------------------------------------------------------------------------------------------*/
+.page-footer {
+    background-color: #4F4F4F;
+    color: white;
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+  }
+  
+  /* Estilos para el título de la sección */
+  .section-title {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+  }
+  
+  /* Estilos para los enlaces del footer */
+  .footer-link {
+    color: #F1EFEF;
+  }
+  
+  /* Estilos para los íconos de redes sociales */
+  .social-icon {
+    font-size: 24px;
+    color: #F1EFEF;
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+  }
+  
+  /* Estilos para el botón flotante de redes sociales */
+  .btn-floating {
+    margin: 0 5px;
+  }
+  
+
+  /* Hero About------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#heroAbout {
+    background-color: #f7f0f0;
+    background-image: url(Img/PNG/About_Hero2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+   
+   
+  }
+  
+  .hero-content {
+    color: #A83E51; /* Color del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-family: Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    margin-left: 80px;
+  }
+
+ /*About------*/
+
+#title2 {
+    background-color: transparent; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    background-image: url(...);
+    
+}
+
+#title2 .title {
+    text-align: center; /* Alineación del título al centro */
+    margin-bottom: 50px; /* Espacio inferior para separar el título */
+    font-weight: 650;
+    font-family: "Raleway", sans-serif; /* Fuente del texto */
+}
+
+#title2 .card {
+    border: none; /* Quita el borde de la tarjeta */
+}
+
+#title2 .card-body {
+    padding: 20px; /* Espaciado interno del cuerpo de la tarjeta */
+    font-family: Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 50px;
+    text-align: justify;
+    
+}
+
+.linkedin-icon {
+            color: #0077B5; /* Color de LinkedIn */
+            font-size: 24px;
+        }
+
+ /* Estilo para el texto "More About Eric Henry" */
+ .more-about {
+    font-weight: bold;
+    color: #2f2d2e; /* Color similar al de LinkedIn */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-size: 13pt;
+}
+
+/* Cambia el color del texto cuando el mouse pasa sobre él */
+.more-about:hover {
+    color: #0d4762; /* Color más oscuro */
+}
+
+/* Estilo personalizado para centrar contenido en dispositivos móviles */
+@media (max-width: 767.98px) {
+    .center-mobile {
+        text-align: center;
+    }
+}
+/* Estilo personalizado para centrar contenido en dispositivos móviles */
+@media (max-width: 767.98px) {
+    #title2 .card-body {
+        text-align: center; /* Alinea el texto al centro */
+        margin-left: 0; /* Reinicia el margen izquierdo */
+    }
+}
+/* About/Hight Quality Promises */
+@media (max-width: 767.98px) {
+    #title1 .card-body {
+      text-align: center; /* Alinea el texto al centro */
+    }
+  }
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Aplica el fondo de color #f6f2f2 */
+    #heroAbout {
+      background-image: url(Img/PNG/About_mobile.png);
+      /* Quita la imagen de fondo */
+      
+    }
+  
+    /* Ajusta el padding para centrar el texto verticalmente */
+    #heroAbout .hero-content {
+      padding-top: 50px; /* Puedes ajustar este valor según necesites */
+      padding-bottom: 50px; /* Puedes ajustar este valor según necesites */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  #heroServices {
+    background-color: #f7f0f0;
+    background-image: url(Img/PNG/About_Hero3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+   
+   
+  }
+
+  #text3{
+    font-size: 15pt;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: black;
+    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+
+
+}
+
+.container {
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    text-align: center; /* Centra el contenido dentro del contenedor */
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -5px; /* Reduzca el espacio entre las imágenes */
+  }
+  
+  .gallery img {
+    max-width: calc(100% - 10px); /* Ancho máximo para tres imágenes por fila */
+    height: auto;
+    margin: 5px; /* Espacio entre las imágenes */
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+ /* Contact Us */
+  body {
+    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 0cap rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #c8304c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    background-color: #ffffff;
+    color: #c8304c;
+    border: 2px solid #c8304c;
+   
+}
+#subject {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ccc; /* Delineado */
+    border-radius: 6px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+
+}
+
+/* Hover effect */
+#subject:hover {
+    border-color: #c8304c; /* Cambio de color del borde al pasar el mouse */
+}
+
+ /* Estilo del enlace */
+ .copyright-links a {
+    color: rgb(241, 227, 227);
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    transition: color 0.3s ease; /* Transición de color suave */
+  }
+
+  /* Estilo de contorno */
+  .copyright-links a:hover {
+    color: #FFFFFF; /* Cambia el color al pasar el mouse */
+    outline: 2px solid #FFFFFF; /* Añade un contorno al pasar el mouse */
+  }
