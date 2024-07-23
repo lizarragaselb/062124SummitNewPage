@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     margin-bottom: 0;
-    background-color: #f6f2f2;
+    background-color: #f5f4f0;
     z-index: 1000;
     color: #000;
     font-family: "Raleway", sans-serif;
@@ -603,16 +603,11 @@ hr.separator {
 }
 
 /* Hero About------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-#heroAbout {
-    background-color: #f7f0f0;
-    background-image: url(Img/PNG/About_Hero2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 300px;
+#hero-about {
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    flex-direction: row;
+    background-color: #f1f1f1;
 }
 
 .hero-content {
@@ -686,18 +681,21 @@ hr.separator {
 }
 
 @media (max-width: 768px) {
-    #heroAbout {
-        background-image: url(Img/PNG/About_mobile.png);
+    #hero-about {
+        flex-direction: column;
     }
 
-    #heroAbout .hero-content {
-        padding-top: 50px; /* Puedes ajustar este valor según necesites */
-        padding-bottom: 50px; /* Puedes ajustar este valor según necesites */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    #hero-text {
+        order: 2;
+        text-align: left;
+    }
+
+    #hero-image {
+        order: 1;
+    }
+
+    #hero-text h1 {
+        text-align: left;
     }
 }
 
