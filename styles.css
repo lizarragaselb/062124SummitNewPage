@@ -603,101 +603,290 @@ hr.separator {
 }
 
 /* Hero About------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-#hero-about {
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
+
+#heroAbout {
     background-color: #f1f1f1;
+    background-image: url(Img/NEWHERO/About_Hero2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    text-align: center;
+    margin-top: 0; /* Ajusta este valor según la altura de tu barra de navegación */
 }
 
 .hero-content {
-    color: #A83E51; /* Color del texto */
-    text-align: left; /* Alinea el texto a la izquierda */
-    font-family: Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #A83E51;
+    font-family: 'Raleway', sans-serif;
     font-weight: 900;
-    font-size: 14px;
-    margin-left: 80px;
+    font-size: 2rem; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+.title01 {
+    font-family: 'Raleway', sans-serif; /* Fuente del texto */
+    font-weight: 700; /* Peso de la fuente */
+    font-size: 24pt !important; /* Tamaño de la fuente */
+    color: #c8304c; /* Color del texto */
+    text-align: center; /* Alineación del texto al centro */
+    margin-bottom: 40px; /* Espacio inferior para separar el título */
 }
 
-/*About------*/
+@media (max-width: 768px) {
+    .title01 {
+        font-size: 2.5rem !important; /* Tamaño de la fuente en pantallas pequeñas */
+    }
+}
+/* About Us Section */
 #title2 {
-    background-color: transparent; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
+    background-color: transparent;
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho máximo para mantenerlo alineado */
+    margin: 0 auto; /* Centra el contenedor */
 }
 
 #title2 .title {
-    text-align: center; /* Alineación del título al centro */
-    margin-bottom: 50px; /* Espacio inferior para separar el título */
-    font-weight: 650;
-    font-family: "Raleway", sans-serif; /* Fuente del texto */
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #A83E51;
 }
 
 #title2 .card {
-    border: none; /* Quita el borde de la tarjeta */
+    border: none;
 }
 
 #title2 .card-body {
-    padding: 20px; /* Espaciado interno del cuerpo de la tarjeta */
-    font-family: Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     margin-left: 50px;
     text-align: justify;
 }
 
 .linkedin-icon {
-    color: #0077B5; /* Color de LinkedIn */
+    color: #0077B5;
     font-size: 24px;
 }
 
-/* Estilo para el texto "More About Eric Henry" */
 .more-about {
     font-weight: bold;
-    color: #2f2d2e; /* Color similar al de LinkedIn */
-    text-decoration: none; /* Quita el subrayado del enlace */
+    color: #2f2d2e;
+    text-decoration: none;
     font-size: 13pt;
 }
 
 .more-about:hover {
-    color: #0d4762; /* Color más oscuro */
+    color: #0d4762;
 }
 
-@media (max-width: 767.98px) {
-    .center-mobile {
+@media (max-width: 768px) {
+    #heroAbout {
+        height: 20vh;
+    }
+
+    .hero-content {
+        font-size: 1.5rem;
+    }
+
+    #title2 .card-body {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
+/* Summit High-Quality Promises Section */
+#title1 {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#title1 .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#title1 .card {
+    border: none;
+}
+
+#title1 .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#title1 .card-text {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#title1 .card-text span {
+    font-weight: bold;
+}
+
+#title1 .btn-primary {
+    background-color: #c8304c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#title1 .btn-primary:hover {
+    background-color: #ffffff;
+    color: #c8304c;
+    border: 1px solid #c8304c;
+}
+
+@media (max-width: 768px) {
+    #title1 .card-body {
+        text-align: center;
+    }
+
+    #title1 .btn-primary {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* We are wine enthusiasts Section */
+#title3 {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#title3 .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#title3 .card {
+    border: none;
+}
+
+#title3 .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#title3 .card-text {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#title3 .card-text span {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #title3 .card-body {
         text-align: center;
     }
 }
 
-@media (max-width: 767.98px) {
-    #title2 .card-body {
-        text-align: center; /* Alinea el texto al centro */
-        margin-left: 0; /* Reinicia el margen izquierdo */
-    }
+/* We have high expectations Section */
+#title4 {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@media (max-width: 767.98px) {
-    #title1 .card-body {
-        text-align: center; /* Alinea el texto al centro */
-    }
+#title4 .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#title4 .card {
+    border: none;
+}
+
+#title4 .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#title4 .card-text {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#title4 .card-text span {
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
-    #hero-about {
-        flex-direction: column;
-    }
-
-    #hero-text {
-        order: 2;
-        text-align: left;
-    }
-
-    #hero-image {
-        order: 1;
-    }
-
-    #hero-text h1 {
-        text-align: left;
+    #title4 .card-body {
+        text-align: center;
     }
 }
+
+/* We learn about your brand Section */
+#title5 {
+    background-color: transparent;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#title5 .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+#title5 .card {
+    border: none;
+}
+
+#title5 .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#title5 .card-text {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+#title5 .card-text span {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #title5 .card-body {
+        text-align: center;
+    }
+}
+/* SERVICES -------------------------------------------------------------------------------------------------------*/
 
 #heroServices {
     background-color: #f7f0f0;
