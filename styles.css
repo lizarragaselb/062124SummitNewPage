@@ -126,6 +126,7 @@
 /* Estilos para el carousel */
 .carousel {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Agregar sombra al carousel */
+   
 }
 
 .carousel-caption {
@@ -145,7 +146,6 @@
 .carousel-caption button {
     text-align: left; /* Alineación del texto a la izquierda */
     display: block; /* Asegura que cada elemento esté en su propia línea */
-
 }
 
 .carousel-caption h1 {
@@ -173,16 +173,17 @@
     margin-top: 20px; /* Espaciado superior para el botón */
     padding: 15px;
 }
+
 .carousel-caption button:hover {
     background-color: #ffffff; /* Change the background color on hover */
     color: #c8304c;
     border: 2px solid #c8304c;
-   
 }
 
 .carousel-item img {
     height: 645px; /* Modifica esta altura según tus necesidades */
     object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo la relación de aspecto */
+    object-position: center top; /* Mantiene la parte superior de la imagen visible */
     filter: brightness(0.7);
 }
 
@@ -193,50 +194,49 @@
         padding: 10px;
         left: 5%; /* Ajuste del margen izquierdo */
     }
-    
+
     .carousel-caption h1 {
         font-size: 2rem;
     }
-    
+
     .carousel-caption p {
         font-size: 1.2rem;
     }
-    
+
     .carousel-caption button {
         font-size: 1rem;
     }
 }
 
-@media (max-width: 576px) {
-    .carousel-caption {
-        max-width: 90%;
-        padding: 5px;
-        left: 5%; /* Ajuste del margen izquierdo */
+@media (min-width: 1600px) {
+    .carousel-item img {
+        height: 1250px; /* Reduce la altura en pantallas más grandes */
     }
-    
+
     .carousel-caption h1 {
+        font-size: 3.5rem;
+    }
+
+    .carousel-caption p {
         font-size: 2.5rem;
     }
-    
-    .carousel-caption p {
-        font-size: 1.5rem;
-    }
-    
+
     .carousel-caption button {
-        font-size: 1.0rem;
+        font-size: 1.5rem;
     }
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
-/* Do custoers tastings really drive sales? */
+/* Do consumer tastings really drive sales? */
 
 #title1 {
     background-color: transparent; /* Color de fondo */
     padding: 20px; /* Espaciado interno */
-    background-image: url(...);
-    
 }
-
+#title1 img {
+    max-width: 100%;
+    height: auto;
+}
 #title1 .title {
     text-align: center; /* Alineación del título al centro */
     margin-bottom: 20px; /* Espacio inferior para separar el título */
@@ -249,8 +249,23 @@
 }
 
 #title1 .card-body {
-    padding: 60px; /* Espaciado interno del cuerpo de la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
+
+#text1,
+#text2 {
+    text-align: left;
+}
+@media (max-width: 768px) {
+    #text1,
+    #text2 {
+        text-align: center;
+    }
+}
+
 
 #title1 .btn-primary {
     float: left; /* Alinea el botón a la izquierda */
@@ -259,6 +274,7 @@
     padding: 10px 20px; /* Ajusta el padding del botón */
     font-size: 16px; /* Ajusta el tamaño de la fuente */
 }
+
 #title1 .btn-primary:hover {
     background-color: #ffffff; /* Change the background color on hover */
     color: #c8304c;
@@ -274,11 +290,13 @@
         width: 100%; /* El ancho del botón se ajusta al 100% del contenedor */
     }
 }
+
 #title1 .card-text {
     font-family: "Raleway", sans-serif; /* Fuente del texto */
     color: #333; /* Color del texto */
     font-size: 20px; /* Tamaño de la fuente */
     line-height: 1.6; /* Altura de línea */
+
 }
 
 #title1 .card-text span {
@@ -288,6 +306,7 @@
 #title1 .card-text#text2 {
     color: grey; /* Color del texto para el segundo párrafo */
 }
+
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* Quality promises */
 
@@ -297,42 +316,33 @@
     font-size: 20px; /* Tamaño de la fuente */
     line-height: 1.6; /* Altura de línea */
     font-weight: 450;
-
 }
+
 #summit-title {
-    /* Añadir espacio en la parte inferior */
     margin-bottom: 40px; /* Puedes ajustar este valor según sea necesario */
     font-family:"Raleway", sans-serif;
     font-weight: 700;
     margin-top: 80px;
 }
-   
-
 
 #summit-subh {
-    /* Agregar estilos al contenedor principal */
-  
     padding: 60px 0; /* Espaciado interno superior e inferior */
 }
 
 #summit-subh h4 {
-    /* Estilos para los títulos */
     font-size: 1.3rem; /* Tamaño de fuente */
     font-family:"Raleway", sans-serif;
 }
 
 #summit-subh img {
-    /* Estilos para las imágenes */
     margin-bottom: 5px; /* Espaciado inferior */
 }
 
 #summit-background {
-    background-image: url(...);
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
     background-position: center; /* Centra la imagen dentro del contenedor */
     padding: 20px; /* Ajusta el espacio interior del contenedor según sea necesario */
     color: #000000; /* Color del texto */
-    
 }
 
 .separator-line {
@@ -343,33 +353,28 @@
     margin-top: 50px;
 }
 
-    /* Estilos para el hr */
-    hr.separator {
-        border: 1px solid #a19f9f;
-        margin: px 0;
-        width: 100%;
-        align-items: center;
-    }
+hr.separator {
+    border: 1px solid #a19f9f;
+    width: 100%;
+    align-items: center;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 /* Estilos para Testimonials */
 #summit-testimonials {
     margin-bottom: 0; /* Ajusta o elimina el margen inferior según sea necesario */
 }
 
-
 .home-testimonial {
-    
     background-color: #ffffff;
     padding: 0px 0;
 }
 
 .home-testimonial-bottom {
-    
     background-image: url(Img/PNG/About_testimonials2.png);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    margin-top:60px;
+    margin-top: 60px;
     padding-top: -300px;
-  
 }
 
 .home-testimonial h3 {
@@ -390,7 +395,6 @@
 .testimonial-inner {
     position: relative;
     top: -60px;
-    
 }
 
 .testimonial-pos {
@@ -441,10 +445,10 @@
     padding-bottom: 60px;
 }
 
-
 #cliente-carousel {
     margin-top: 0; /* Ajusta o elimina el margen superior según sea necesario */
 }
+
 #cliente-carousel .carousel-item img#client-img {
     width: 187px;
     height: 187px;
@@ -480,13 +484,20 @@
     background-color: transparent;
     border-color: transparent;
 }
+
 .row.my-5 {
     display: flex;
     align-items: center; /* Alinea verticalmente los elementos */
 }
 
+@media (max-width: 768px) {
+    #carouselExampleControls .col-3 {
+        flex: 0 0 50%; /* Cambia el ancho de cada columna a 50% en pantallas pequeñas */
+        max-width: 50%;
+    }
+}
+
 /*App style--------------------------------------------------------------------------- */
-/* Estilos personalizados */
 #App {
     background-image: url('Img/PNG/Back_HIGH4.png');
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el contenedor */
@@ -495,7 +506,6 @@
     color: #ffffff; /* Color del texto, si es necesario */
     padding-top: 100px;
     font-family: "Raleway", sans-serif;
-
 }
 
 #App .card-title {
@@ -533,8 +543,8 @@
         padding-top: 85px; /* 60px original + 25px adicionales */
     }
 }
+
 /* General adjustments */
-/* Estilos para los botones */
 .custom-btn {
     padding: 0; /* Elimina el padding del botón */
     border: none !important; /* Elimina el borde del botón */
@@ -565,41 +575,34 @@
     }
 }
 
-
 /* Estilos generales del footer ---------------------------------------------------------------------------------------------------------------------*/
 .page-footer {
     background-color: #4F4F4F;
     color: white;
     font-family: "Raleway", sans-serif; /* Fuente del texto */
-  }
-  
-  /* Estilos para el título de la sección */
-  .section-title {
+}
+
+.section-title {
     color: #FFFFFF;
     font-weight: 600;
     font-family: "Raleway", sans-serif; /* Fuente del texto */
-  }
-  
-  /* Estilos para los enlaces del footer */
-  .footer-link {
+}
+
+.footer-link {
     color: #F1EFEF;
-  }
-  
-  /* Estilos para los íconos de redes sociales */
-  .social-icon {
+}
+
+.social-icon {
     font-size: 24px;
     color: #F1EFEF;
     font-family: "Raleway", sans-serif; /* Fuente del texto */
-  }
-  
-  /* Estilos para el botón flotante de redes sociales */
-  .btn-floating {
+}
+
+.btn-floating {
     margin: 0 5px;
-  }
-  
+}
 
-  /* Hero About------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
+/* Hero About------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 #heroAbout {
     background-color: #f7f0f0;
     background-image: url(Img/PNG/About_Hero2.png);
@@ -610,26 +613,21 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
-   
-   
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
     color: #A83E51; /* Color del texto */
     text-align: left; /* Alinea el texto a la izquierda */
     font-family: Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 900;
     font-size: 14px;
     margin-left: 80px;
-  }
+}
 
- /*About------*/
-
+/*About------*/
 #title2 {
     background-color: transparent; /* Color de fondo */
     padding: 20px; /* Espaciado interno */
-    background-image: url(...);
-    
 }
 
 #title2 .title {
@@ -649,69 +647,61 @@
     font-size: 20px;
     margin-left: 50px;
     text-align: justify;
-    
 }
 
 .linkedin-icon {
-            color: #0077B5; /* Color de LinkedIn */
-            font-size: 24px;
-        }
+    color: #0077B5; /* Color de LinkedIn */
+    font-size: 24px;
+}
 
- /* Estilo para el texto "More About Eric Henry" */
- .more-about {
+/* Estilo para el texto "More About Eric Henry" */
+.more-about {
     font-weight: bold;
     color: #2f2d2e; /* Color similar al de LinkedIn */
     text-decoration: none; /* Quita el subrayado del enlace */
     font-size: 13pt;
 }
 
-/* Cambia el color del texto cuando el mouse pasa sobre él */
 .more-about:hover {
     color: #0d4762; /* Color más oscuro */
 }
 
-/* Estilo personalizado para centrar contenido en dispositivos móviles */
 @media (max-width: 767.98px) {
     .center-mobile {
         text-align: center;
     }
 }
-/* Estilo personalizado para centrar contenido en dispositivos móviles */
+
 @media (max-width: 767.98px) {
     #title2 .card-body {
         text-align: center; /* Alinea el texto al centro */
         margin-left: 0; /* Reinicia el margen izquierdo */
     }
 }
-/* About/Hight Quality Promises */
+
 @media (max-width: 767.98px) {
     #title1 .card-body {
-      text-align: center; /* Alinea el texto al centro */
+        text-align: center; /* Alinea el texto al centro */
     }
-  }
+}
 
-/* Para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Aplica el fondo de color #f6f2f2 */
     #heroAbout {
-      background-image: url(Img/PNG/About_mobile.png);
-      /* Quita la imagen de fondo */
-      
+        background-image: url(Img/PNG/About_mobile.png);
     }
-  
-    /* Ajusta el padding para centrar el texto verticalmente */
-    #heroAbout .hero-content {
-      padding-top: 50px; /* Puedes ajustar este valor según necesites */
-      padding-bottom: 50px; /* Puedes ajustar este valor según necesites */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-  }
 
-  #heroServices {
+    #heroAbout .hero-content {
+        padding-top: 50px; /* Puedes ajustar este valor según necesites */
+        padding-bottom: 50px; /* Puedes ajustar este valor según necesites */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+#heroServices {
     background-color: #f7f0f0;
     background-image: url(Img/PNG/About_Hero3.png);
     background-size: cover;
@@ -721,44 +711,40 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinea el contenido a la izquierda */
-   
-   
-  }
+}
 
-  #text3{
+#text3 {
     font-size: 15pt;
     font-weight: 400;
     margin-top: 40px;
     margin-bottom: 40px;
     text-align: center;
     color: black;
-    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-
-
+    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
     margin: 0 auto; /* Centra el contenedor horizontalmente */
     text-align: center; /* Centra el contenido dentro del contenedor */
-  }
-  
-  .gallery {
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: -5px; /* Reduzca el espacio entre las imágenes */
-  }
-  
-  .gallery img {
+}
+
+.gallery img {
     max-width: calc(100% - 10px); /* Ancho máximo para tres imágenes por fila */
     height: auto;
     margin: 5px; /* Espacio entre las imágenes */
     box-sizing: border-box;
     margin-bottom: 30px;
-  }
+}
 
- /* Contact Us */
-  body {
+/* Contact Us */
+body {
     font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
@@ -773,8 +759,7 @@
     background-color: #fff;
     box-shadow: 0 0 0cap rgba(0, 0, 0, 0.1);
     border-radius: 30px;
-    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-
+    font-family:Raleway,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .contact-form label {
@@ -809,15 +794,14 @@
     background-color: #ffffff;
     color: #c8304c;
     border: 2px solid #c8304c;
-   
 }
+
 #subject {
     width: 100%;
     padding: 20px;
     border: 2px solid #ccc; /* Delineado */
     border-radius: 6px; /* Bordes redondeados */
     font-size: 16px; /* Tamaño del texto */
-
 }
 
 /* Hover effect */
@@ -825,15 +809,13 @@
     border-color: #c8304c; /* Cambio de color del borde al pasar el mouse */
 }
 
- /* Estilo del enlace */
- .copyright-links a {
+.copyright-links a {
     color: rgb(241, 227, 227);
     text-decoration: none; /* Quita el subrayado predeterminado */
     transition: color 0.3s ease; /* Transición de color suave */
-  }
+}
 
-  /* Estilo de contorno */
-  .copyright-links a:hover {
+.copyright-links a:hover {
     color: #FFFFFF; /* Cambia el color al pasar el mouse */
     outline: 2px solid #FFFFFF; /* Añade un contorno al pasar el mouse */
-  }
+}
