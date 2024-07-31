@@ -437,23 +437,23 @@ hr.separator {
 
 /* Client carousel */
 #cliente-title {
-    font-family: 'Raleway', sans-serif; /* Cambia a la fuente que prefieras */
-    font-weight: 700; /* Cambia al peso que prefieras */
-    color: #000000; /* Cambia al color que prefieras */
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 700; 
+    color: #000000; 
     text-align: center;
     padding: 20px;
     padding-bottom: 60px;
 }
 
 #cliente-carousel {
-    margin-top: 0; /* Ajusta o elimina el margen superior según sea necesario */
+    margin-top: 0; 
 }
 
 #cliente-carousel .carousel-item img#client-img {
     width: 187px;
     height: 187px;
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción sin estirarse */
-    filter: none; /* Asegura que no haya filtros aplicados a las imágenes */
+    object-fit: contain; 
+    filter: none; 
 }
 
 .carousel-container {
@@ -461,14 +461,14 @@ hr.separator {
     justify-content: center;
     background-color: #ffffff00;
     padding-bottom: 80px;
-    box-shadow: none; /* Asegura que no haya sombra en el contenedor */
+    box-shadow: none; 
     background-image: url(Img/PNG/Bac_HIGH02.png);
 }
 
 #carouselExampleControls {
     width: 90%;
     padding-left: 40px;
-    box-shadow: none !important; /* Elimina cualquier sombra persistente del contenedor */
+    box-shadow: none !important; 
 }
 
 #carousel-control-prev2,
@@ -487,15 +487,16 @@ hr.separator {
 
 .row.my-5 {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos */
+    align-items: center; 
 }
 
 @media (max-width: 768px) {
     #carouselExampleControls .col-3 {
-        flex: 0 0 50%; /* Cambia el ancho de cada columna a 50% en pantallas pequeñas */
+        flex: 0 0 50%; 
         max-width: 50%;
     }
 }
+
 
 /*App style--------------------------------------------------------------------------- */
 #App {
@@ -887,6 +888,19 @@ hr.separator {
     }
 }
 /* SERVICES -------------------------------------------------------------------------------------------------------*/
+.responsive-map {
+    width: 100%;
+    height: auto; /* Asegura que la imagen mantenga sus proporciones */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro de su contenedor sin distorsionarse */
+}
+
+@media (max-width: 768px) {
+    .responsive-map {
+        width: 130%; /* Hace que la imagen sea más grande en dispositivos móviles */
+        margin-left: -10%; /* Centra la imagen al aumentar su tamaño */
+    }
+}
+
 
 #heroServices {
     background-color: #f7f0f0;
@@ -1005,4 +1019,16 @@ body {
 .copyright-links a:hover {
     color: #FFFFFF; /* Cambia el color al pasar el mouse */
     outline: 2px solid #FFFFFF; /* Añade un contorno al pasar el mouse */
+}
+
+.email-link {
+    color: #F1EFEF;
+    text-decoration: none;
+    
+    padding: 2px 4px; /* Espacio entre el texto y el borde */
+    transition: color 0.3s, border-color 0.3s; /* Transición suave para el efecto hover */
+}
+
+.email-link:hover {
+    color: #f58b9c; /* Color del texto en hover */
 }
