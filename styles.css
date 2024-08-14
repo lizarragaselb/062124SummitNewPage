@@ -885,8 +885,10 @@ hr.separator {
 @media (max-width: 768px) {
     #title5 .card-body {
         text-align: center;
+        
     }
 }
+
 /* SERVICES -------------------------------------------------------------------------------------------------------*/
 .responsive-map {
     width: 100%;
@@ -956,7 +958,7 @@ body {
     width: 100%;
     max-width: 700px;
     margin: 10px auto;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     box-shadow: 0 0 0cap rgba(0, 0, 0, 0.1);
     border-radius: 30px;
@@ -965,7 +967,7 @@ body {
 
 .contact-form label {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
@@ -973,8 +975,8 @@ body {
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 13px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
