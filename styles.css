@@ -1034,3 +1034,61 @@ body {
 .email-link:hover {
     color: #f58b9c; /* Color del texto en hover */
 }
+
+/* Estilos para vista móvil */
+@media (max-width: 767px) {
+    /* Consumer Wine Tastings */
+    #consumer-tastings-row {
+      flex-direction: column;
+    }
+  
+    #consumer-tastings-image {
+      order: 1; /* Asegura que la imagen esté en la parte superior en vista móvil */
+      margin-bottom: 20px; /* Añade espacio debajo de la imagen */
+    }
+  
+    #consumer-tastings-text {
+      order: 2; /* Asegura que el texto esté debajo de la imagen */
+    }
+  
+    #consumer-tastings-button {
+      margin-top: 20px; /* Añade espacio arriba del botón */
+    }
+  
+    /* Corporate Events */
+    #corporate-events-row {
+      flex-direction: column;
+    }
+  
+    #corporate-events-image {
+      order: 1; /* Asegura que la imagen esté en la parte superior en vista móvil */
+      margin-bottom: 20px; /* Añade espacio debajo de la imagen */
+    }
+  
+    #corporate-events-text {
+      order: 2; /* Asegura que el texto esté debajo de la imagen */
+    }
+  
+    #corporate-events-button {
+      margin-top: 20px; /* Añade espacio arriba del botón */
+    }
+  
+    /* Private Events */
+    #private-events-row {
+      flex-direction: column;
+    }
+  
+    #private-events-image {
+      order: 1; /* Asegura que la imagen esté en la parte superior en vista móvil */
+      margin-bottom: 20px; /* Añade espacio debajo de la imagen */
+    }
+  
+    #private-events-text {
+      order: 2; /* Asegura que el texto esté debajo de la imagen */
+    }
+  
+    #private-events-button {
+      margin-top: 20px; /* Añade espacio arriba del botón */
+    }
+  }
+  
