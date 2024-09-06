@@ -1035,6 +1035,14 @@ body {
     color: #f58b9c; /* Color del texto en hover */
 }
 
+#thankYouMessage {
+    display: none;
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px; /* Change this value to adjust the size */
+}
+
 /* Estilos para vista móvil */
 @media (max-width: 767px) {
     /* Consumer Wine Tastings */
