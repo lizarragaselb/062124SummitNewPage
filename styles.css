@@ -882,12 +882,30 @@ hr.separator {
     font-weight: bold;
 }
 
+/* Ajustes para pantallas móviles */
 @media (max-width: 768px) {
-    #title5 .card-body {
-        text-align: center;
-        
+    /* Reorganizamos las columnas: la imagen arriba, el texto abajo */
+    .order-md-1 {
+        order: 2;
+    }
+
+    .order-md-2 {
+        order: 1;
+    }
+
+    /* El botón al final del contenedor solo en móviles */
+    .col-12 {
+        order: 3;
+    }
+
+    /* Aseguramos que el botón esté centrado y tenga el ancho completo en móviles */
+    .btn-primary {
+        width: 100%;
+        margin-top: 20px;
     }
 }
+
+
 
 /* SERVICES -------------------------------------------------------------------------------------------------------*/
 .responsive-map {
